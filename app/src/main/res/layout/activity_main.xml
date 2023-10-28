@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- boutton pour l'inscription -->
     <Button
         android:id="@+id/register"
         android:layout_width="156dp"
@@ -19,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.711" />
 
+    <!-- Boutton pour connecter -->
     <Button
         android:id="@+id/login"
         android:layout_width="158dp"
@@ -32,6 +34,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
+    <!-- textView pour la creation de compte -->
     <TextView
         android:id="@+id/loginOrSignup"
         android:layout_width="228dp"
@@ -46,6 +49,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.605" />
 
+    <!-- welcoming textview -->
     <TextView
         android:id="@+id/Welcome"
         android:layout_width="329dp"
@@ -61,6 +65,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.105" />
 
+    <!-- Demande de nom -->
     <EditText
         android:id="@+id/username"
         android:layout_width="276dp"
@@ -75,6 +80,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.22" />
 
+    <!-- Demande de mot de passe -->
     <EditText
         android:id="@+id/password"
         android:layout_width="275dp"

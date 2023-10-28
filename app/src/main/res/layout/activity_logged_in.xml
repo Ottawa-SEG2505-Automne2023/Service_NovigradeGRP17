@@ -21,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.083" />
 
+    <!-- textview pour nom -->
     <TextView
         android:id="@+id/nom"
         android:layout_width="wrap_content"
@@ -36,6 +37,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.313" />
 
+    <!-- textview pour role -->
     <TextView
         android:id="@+id/role"
         android:layout_width="wrap_content"
@@ -50,6 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.431" />
+
 
     <TextView
         android:id="@+id/txtViewNom"
