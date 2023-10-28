@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "891698425859",
+    "project_id": "servicenovigrad-9d027",
+    "storage_bucket": "servicenovigrad-9d027.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891698425859:android:97ec1bd652901484f85e36",
+        "android_client_info": {
+          "package_name": "com.example.servicenovigrad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK4MjV4Yn8TEt7kpuN9pSM-Iaps9I0p4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
