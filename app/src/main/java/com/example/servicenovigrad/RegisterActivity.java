@@ -76,7 +76,34 @@ public class RegisterActivity extends AppCompatActivity {
 
         // Setting up onClick listener for the employee registration button (Similar logic as the client registration)
         employe.setOnClickListener(new View.OnClickListener() {
-            // ... (similar to the client's onClick)
+            @Override
+            public void onClick(View view){
+                if(!TextUtils.isEmpty(newUsername.getText().toString())
+                        && !TextUtils.isEmpty(newPassword.getText().toString()) &&
+                        !TextUtils.isEmpty(email.getText().toString()) && estEmail(email.getText().toString()) ){
+                    base = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com");
+                    DatabaseReference newUserNameRef = base.getReference("users/"+newUsername.getText().toString()+"/name");
+                    DatabaseReference newUserPassRef = base.getReference("users/"+newUsername.getText().toString()+"/mdp");
+                    DatabaseReference newUserRoleRef = base.getReference("users/"+newUsername.getText().toString()+"/role");
+                    DatabaseReference newUserEmailRef = base.getReference("users/"+newUsername.getText().toString()+"/email");
+                    newUserNameRef.setValue(newUsername.getText().toString());
+                    newUserPassRef.setValue(newPassword.getText().toString());
+                    newUserRoleRef.setValue("Employe");
+                    newUserEmailRef.setValue(email.getText().toString());
+                    Intent return2=new Intent(RegisterActivity.this,MainActivity.class);
+                    startActivity(return2);
+                    finish();
+
+                }
+                else{
+                    if(!estEmail(email.getText().toString())){
+                        Toast.makeText(getApplicationContext(), "SVP rentrez une adresse mail correcte", Toast.LENGTH_LONG).show();
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "SVP remplissez tout les champs", Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
         });
     }
 
