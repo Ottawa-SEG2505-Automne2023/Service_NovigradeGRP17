@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/photobackground"
-    tools:context=".LoggedIn">
+    tools:context=".LoggedAdmin">
+
     <TextView
         android:id="@+id/connexion"
         android:layout_width="256dp"
@@ -22,7 +22,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.083" />
 
-    <!-- pour nom -->
     <TextView
         android:id="@+id/nom"
         android:layout_width="wrap_content"
@@ -38,7 +37,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.313" />
 
-    <!-- pour role -->
     <TextView
         android:id="@+id/role"
         android:layout_width="wrap_content"
@@ -53,7 +51,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.431" />
-
 
     <TextView
         android:id="@+id/txtViewNom"
@@ -81,7 +78,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.436" />
 
+    <Button
+        android:id="@+id/btnSupprimer"
+        android:layout_width="192dp"
+        android:layout_height="63dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="Supprimer un compte employé/client ou une succursale"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.597" />
 
-
+    <Button
+        android:id="@+id/btnServices"
+        android:layout_width="192dp"
+        android:layout_height="63dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Ajouter/Modifier/Supprimer un service"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.597" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

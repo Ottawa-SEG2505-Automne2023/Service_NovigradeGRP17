@@ -102,11 +102,11 @@ public class MainActivity extends AppCompatActivity {
                                 intent0.putExtra("nom", username);
                                 startActivity(intent0);
                             } else if (role.equals("Employe")) {
-                                Intent intent1 = new Intent(MainActivity.this, LoggedIn.class);
+                                Intent intent1 = new Intent(MainActivity.this, LoggedEmploye.class);
                                 intent1.putExtra("nom", username);
                                 startActivity(intent1);
                             } else {
-                                Intent intent2 = new Intent(MainActivity.this, LoggedIn.class);
+                                Intent intent2 = new Intent(MainActivity.this, LoggedClient.class);
                                 intent2.putExtra("nom", username);
                                 startActivity(intent2);
                             }

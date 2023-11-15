@@ -13,6 +13,18 @@
         android:theme="@style/Theme.ServiceNovigrad"
         tools:targetApi="31">
         <activity
+            android:name=".DeleteAccount"
+            android:exported="false" />
+        <activity
+            android:name=".LoggedAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".LoggedEmploye"
+            android:exported="false" />
+        <activity
+            android:name=".LoggedClient"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
