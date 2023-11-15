@@ -44,7 +44,7 @@ public class EditService extends AppCompatActivity {
         str = intent.getStringExtra("nom").toString();
         textViewHaut.setText("Vous êtes entrain de modifier le service : "+str);
         editTextNom.setText(str);
-        base = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com").getReference();
+        base = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference();
         refForm = base.child("services").child(str).child("form");
         refDoc = base.child("services").child(str).child("doc");
         refForm.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -73,7 +73,7 @@ public class EditService extends AppCompatActivity {
                 if(!TextUtils.isEmpty(editTextNom.getText().toString())
                         && !TextUtils.isEmpty(editTextForm.getText().toString()) &&
                         !TextUtils.isEmpty(editTextDoc.getText().toString())){
-                    FirebaseDatabase firebase = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com");
+                    FirebaseDatabase firebase = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com");
                     Intent intent1 = getIntent();
                     String str1 = "";
                     str1 = intent1.getStringExtra("nom").toString();
@@ -111,7 +111,7 @@ public class EditService extends AppCompatActivity {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseDatabase firebase = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com");
+                FirebaseDatabase firebase = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com");
                 DatabaseReference nouveauNom = firebase.getReference("services/"+editTextNom.getText().toString()+"/nom");
                 DatabaseReference nouveauForm = firebase.getReference("services/"+editTextNom.getText().toString()+"/form");
                 DatabaseReference nouveauDoc = firebase.getReference("services/"+editTextNom.getText().toString()+"/doc");

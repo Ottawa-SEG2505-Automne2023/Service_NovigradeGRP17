@@ -30,7 +30,7 @@ public class ListeSuccursales extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_succursales);
         listeSuccur=(ListView) findViewById(R.id.listeSuccur);
-        baseSuccur = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com").getReference().child("succursales");
+        baseSuccur = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference().child("succursales");
         ArrayList<String> liste = new ArrayList<String>();
         ArrayAdapter<String> adaptateur = new ArrayAdapter<String>(ListeSuccursales.this, android.R.layout.simple_expandable_list_item_1,liste);
         baseSuccur.addChildEventListener(new ChildEventListener() {
@@ -70,7 +70,7 @@ public class ListeSuccursales extends AppCompatActivity {
         listeSuccur.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                base = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com");
+                base = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com");
                 String nom = adaptateur.getItem(i);
                 DatabaseReference nomRef = base.getReference("succursales/"+nom+"/nomSuccur");
                 DatabaseReference villeRef = base.getReference("succursales/"+nom+"/ville");

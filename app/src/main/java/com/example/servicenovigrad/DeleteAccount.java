@@ -27,7 +27,7 @@ public class DeleteAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete_account);
-        base = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com");
+        base = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/");
         editTxtSuppr = (EditText) findViewById(R.id.editTxtSuppr);
         btnSuppr=(Button)findViewById(R.id.btnSuppr);
         btnSuccur=(Button)findViewById(R.id.btnSuccur);
@@ -36,7 +36,7 @@ public class DeleteAccount extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 if(!TextUtils.isEmpty(editTxtSuppr.getText().toString())){
-                    base = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com");
+                    base = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/");
                     DatabaseReference nomRef = base.getReference("users/"+editTxtSuppr.getText().toString()+"/name");
                     nomRef.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override

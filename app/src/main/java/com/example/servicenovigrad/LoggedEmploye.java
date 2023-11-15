@@ -40,7 +40,7 @@ public class LoggedEmploye extends AppCompatActivity {
         //en vérifiant que le champ du nom de la succursale dans la partie "succursales" de notre
         //base de données existe
         //Vérification que l'employé est lié à une succursale:
-        DatabaseReference base = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com").getReference();
+        DatabaseReference base = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference();
         DatabaseReference refSuccur = base.child("users").child(str).child("succursale");
         refSuccur.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -54,7 +54,7 @@ public class LoggedEmploye extends AppCompatActivity {
                 }
                 else{
                     //Vérification que la succursale existe:
-                    DatabaseReference base2 = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com").getReference();
+                    DatabaseReference base2 = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference();
                     DatabaseReference refSuccurNom = base.child("succursales").child(succur).child("nomSuccur");
                     refSuccurNom.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
@@ -84,24 +84,6 @@ public class LoggedEmploye extends AppCompatActivity {
             }
         });
 
-        btnSuccurExiste.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                Intent intent1 = new Intent(LoggedEmploye.this, ProfilSuccur.class);
-                intent1.putExtra("nomSuccursale", txtNomSuccur.getText());
-                intent1.putExtra("nomEmploye", str);
-                startActivity(intent1);
-                finish();
-            }
-        });
-        btnNoSuccur.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                Intent intent2 = new Intent(LoggedEmploye.this, CreateSuccur.class);
-                intent2.putExtra("nomEmploye", str);
-                startActivity(intent2);
-                finish();
-            }
-        });
+
     }
 }

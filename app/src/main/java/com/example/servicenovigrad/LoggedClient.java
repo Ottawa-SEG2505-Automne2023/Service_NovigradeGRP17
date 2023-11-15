@@ -27,28 +27,11 @@ public class LoggedClient extends AppCompatActivity {
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnServ = (Button) findViewById(R.id.btnServ);
         btnHeures = (Button) findViewById(R.id.btnHeures);
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent0 = new Intent(LoggedClient.this, SelectionAddresse.class);
-                intent0.putExtra("nomClient", nomClient);
-                startActivity(intent0);
-            }
-        });
-        btnServ.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent1 = new Intent(LoggedClient.this, SelectionService.class);
-                intent1.putExtra("nomClient", nomClient);
-                startActivity(intent1);
-            }
-        });
-        btnHeures.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent2 = new Intent(LoggedClient.this, SelectionHeures.class);
-                intent2.putExtra("nomClient", nomClient);
-                startActivity(intent2);
-            }
-        });
-    }
+    }}
+
+
+
+
+
+
+

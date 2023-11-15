@@ -33,7 +33,7 @@ public class CreateService extends AppCompatActivity {
                 if(!TextUtils.isEmpty(editTextNewNom.getText().toString())
                         && !TextUtils.isEmpty(editTextNewForm.getText().toString()) &&
                         !TextUtils.isEmpty(editTextNewDoc.getText().toString())){
-                    base = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com");
+                    base = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/");
                     DatabaseReference newNomRef = base.getReference("services/"+editTextNewNom.getText().toString()+"/nom");
                     DatabaseReference newFormRef = base.getReference("services/"+editTextNewNom.getText().toString()+"/form");
                     DatabaseReference newDocRef = base.getReference("services/"+editTextNewNom.getText().toString()+"/doc");
