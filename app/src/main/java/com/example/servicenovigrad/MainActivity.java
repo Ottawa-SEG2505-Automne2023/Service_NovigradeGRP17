@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                             String role = dataSnapshot.getValue(String.class);
                             // En fonction du rôle, redirection vers l'activité appropriée
                             if (role.equals("Administrateur")) {
-                                Intent intent0 = new Intent(MainActivity.this, LoggedIn.class);
+                                Intent intent0 = new Intent(MainActivity.this, LoggedAdmin.class);
                                 intent0.putExtra("nom", username);
                                 startActivity(intent0);
                             } else if (role.equals("Employe")) {

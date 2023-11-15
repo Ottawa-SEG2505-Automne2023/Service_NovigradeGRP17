@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ServiceNovigrad"
         tools:targetApi="31">
         <activity
+            android:name=".ListeSuccursales"
+            android:exported="false" />
+        <activity
             android:name=".DeleteAccount"
             android:exported="false" />
         <activity
