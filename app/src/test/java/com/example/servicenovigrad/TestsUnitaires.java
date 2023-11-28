@@ -30,4 +30,20 @@ public class TestsUnitaires {
     public void testEmail4() {
         assertFalse(RegisterActivity.estEmail("test"));
     }
+    @Test
+    public void testHeures1() {
+        assertFalse(EditSuccur.heuresCorrectes(10,10));
+    }
+    @Test
+    public void testHeures2() {
+        assertTrue(EditSuccur.heuresCorrectes(8,16));
+    }
+    @Test
+    public void testChamps1() {
+        assertFalse(EditSuccur.champsCorrects("Novigrad12","Ottawa","12 Rue Lincoln",""));
+    }
+    @Test
+    public void testChamps2() {
+        assertTrue(EditSuccur.champsCorrects("Novigrad12","Ottawa","12 Rue Lincoln","6131149562"));
+    }
 }

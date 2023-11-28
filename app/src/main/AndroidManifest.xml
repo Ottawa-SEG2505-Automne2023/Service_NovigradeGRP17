@@ -13,6 +13,33 @@
         android:theme="@style/Theme.ServiceNovigrad"
         tools:targetApi="31">
         <activity
+            android:name=".TraiteDemande"
+            android:exported="false" />
+        <activity
+            android:name=".Demandes"
+            android:exported="false" />
+        <activity
+            android:name=".RemoveService"
+            android:exported="false" />
+        <activity
+            android:name=".AddService"
+            android:exported="false" />
+        <activity
+            android:name=".EditSuccur"
+            android:exported="false"
+            android:label="@string/title_activity_edit_succur"
+            android:theme="@style/Theme.ServiceNovigrad" />
+        <activity
+            android:name=".CreateSuccur"
+            android:exported="false"
+            android:label="@string/title_activity_create_succur"
+            android:theme="@style/Theme.ServiceNovigrad" />
+        <activity
+            android:name=".ProfilSuccur"
+            android:exported="false"
+            android:label="@string/title_activity_profil_succur"
+            android:theme="@style/Theme.ServiceNovigrad" />
+        <activity
             android:name=".EditServices"
             android:exported="false" />
         <activity

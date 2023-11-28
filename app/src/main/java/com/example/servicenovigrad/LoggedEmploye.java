@@ -83,6 +83,25 @@ public class LoggedEmploye extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
+        btnSuccurExiste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent1 = new Intent(LoggedEmploye.this, ProfilSuccur.class);
+                intent1.putExtra("nomSuccursale", txtNomSuccur.getText());
+                intent1.putExtra("nomEmploye", str);
+                startActivity(intent1);
+                finish();
+            }
+        });
+        btnNoSuccur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent2 = new Intent(LoggedEmploye.this, CreateSuccur.class);
+                intent2.putExtra("nomEmploye", str);
+                startActivity(intent2);
+                finish();
+            }
+        });
 
 
     }
