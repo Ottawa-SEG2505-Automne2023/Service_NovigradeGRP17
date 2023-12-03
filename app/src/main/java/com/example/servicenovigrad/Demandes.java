@@ -37,7 +37,7 @@ public class Demandes extends AppCompatActivity {
         nomSucc = intent.getStringExtra("nomSuccursale");
         nomEmp = intent.getStringExtra("nomEmploye");
         listeDemandes=(ListView) findViewById(R.id.listeDemandes);
-        baseDemandes = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference().child("demandes").child(nomSucc);
+        baseDemandes = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference().child("demandes").child(nomSucc);
         arrayListDemandes = new ArrayList<String>();
         ArrayAdapter<String> adaptateurDemandes = new ArrayAdapter<String>(Demandes.this, android.R.layout.simple_expandable_list_item_1,arrayListDemandes);
         baseDemandes.addChildEventListener(new ChildEventListener() {
@@ -45,7 +45,7 @@ public class Demandes extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 for(DataSnapshot ds : snapshot.getChildren()) {
                     nomServiceDemande = ds.getValue(String.class);
-                    DatabaseReference refNomClientDemande = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference().child("demandes").child(nomSucc).child(nomServiceDemande).child("nomClient");
+                    DatabaseReference refNomClientDemande = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference().child("demandes").child(nomSucc).child(nomServiceDemande).child("nomClient");
                     refNomClientDemande.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {

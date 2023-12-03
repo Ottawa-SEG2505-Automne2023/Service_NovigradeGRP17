@@ -36,7 +36,7 @@ public class AddService extends AppCompatActivity {
         Intent intent = getIntent();
         nomSucc = intent.getStringExtra("nomSuccursale");
         nomEmp = intent.getStringExtra("nomEmploye");
-        baseAllServices = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference().child("services");
+        baseAllServices = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference().child("services");
         ArrayList<String> listeAll = new ArrayList<String>();
         ArrayAdapter<String> adaptateur = new ArrayAdapter<String>(AddService.this, android.R.layout.simple_expandable_list_item_1,listeAll);
         baseAllServices.addChildEventListener(new ChildEventListener() {

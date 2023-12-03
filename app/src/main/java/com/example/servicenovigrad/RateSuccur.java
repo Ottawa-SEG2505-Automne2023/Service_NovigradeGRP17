@@ -32,8 +32,8 @@ public class RateSuccur extends AppCompatActivity {
         Intent intent = getIntent();
         nomSuccursale = intent.getStringExtra("nomSuccur");
         nomClient = intent.getStringExtra("nomClient");
-        refTotal = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com").getReference("succursales/"+nomSuccursale+"/noteTotale");
-        refNb = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com").getReference("succursales/"+nomSuccursale+"/nbNotes");
+        refTotal = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference("succursales/"+nomSuccursale+"/noteTotale");
+        refNb = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference("succursales/"+nomSuccursale+"/nbNotes");
         refTotal.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

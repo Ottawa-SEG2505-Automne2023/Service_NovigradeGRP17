@@ -33,7 +33,7 @@ public class EditServices extends AppCompatActivity {
         setContentView(R.layout.activity_edit_services);
         btnAjout=(Button) findViewById(R.id.btnAjout);
         listeServices=(ListView) findViewById(R.id.listeServices);
-        baseServices = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference().child("services");
+        baseServices = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference().child("services");
         ArrayList<String> liste = new ArrayList<String>();
         ArrayAdapter<String> adaptateur = new ArrayAdapter<String>(EditServices.this, android.R.layout.simple_expandable_list_item_1,liste);
         baseServices.addChildEventListener(new ChildEventListener() {

@@ -87,7 +87,7 @@ public class CreateSuccur extends AppCompatActivity {
                 if(EditSuccur.champsCorrects(infoNom.getText().toString(), infoVille.getText().toString(),infoAddresse.getText().toString(),infoNum.getText().toString())
                         && EditSuccur.heuresCorrectes(heureOuv,heureFer))
                 {
-                    base = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com");
+                    base = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/");
                     DatabaseReference employeSuccurRef = base.getReference("users/"+nomEmp+"/succursale");
                     DatabaseReference nomSuccurRef = base.getReference("succursales/"+infoNom.getText().toString()+"/nomSuccur");
                     DatabaseReference villeSuccurRef = base.getReference("succursales/"+infoNom.getText().toString()+"/ville");

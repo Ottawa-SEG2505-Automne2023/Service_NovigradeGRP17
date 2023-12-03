@@ -44,7 +44,7 @@ public class EditService extends AppCompatActivity {
         str = intent.getStringExtra("nom").toString();
         textViewHaut.setText("Vous êtes entrain de modifier le service : "+str);
         editTextNom.setText(str);
-        base = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference();
+        base = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference();
         refForm = base.child("services").child(str).child("form");
         refDoc = base.child("services").child(str).child("doc");
         refForm.addListenerForSingleValueEvent(new ValueEventListener() {

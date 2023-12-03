@@ -40,7 +40,7 @@ public class TraiteDemande extends AppCompatActivity {
         nomDeLaSuccursale = recupere.getStringExtra("nomSuccursale");
         nomService = recupere.getStringExtra("service");
         txtViewTraite.setText("Demande de "+nomService+"soumise par "+nomDuClient);
-        DatabaseReference refBase= FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference();
+        DatabaseReference refBase= FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference();
         DatabaseReference refForm = refBase.child("demandes").child(nomDeLaSuccursale).child(nomService).child("formClient");
         refForm.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

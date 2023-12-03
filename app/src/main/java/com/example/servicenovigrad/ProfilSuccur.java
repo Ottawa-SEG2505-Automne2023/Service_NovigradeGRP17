@@ -49,7 +49,7 @@ public class ProfilSuccur extends AppCompatActivity {
         connecteSuccur = (TextView) findViewById(R.id.connecteSuccur);
         connecteSuccur.setText("Profil de la succursale Novigrad : "+nomSucc);
         listeServiceOffert=(ListView) findViewById(R.id.listeServiceOffert);
-        baseSuccursales = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference().child("succursales").child(nomSucc);
+        baseSuccursales = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference().child("succursales").child(nomSucc);
         listeServ = new ArrayList<String>();
         ArrayAdapter<String> adaptateurServ = new ArrayAdapter<String>(ProfilSuccur.this, android.R.layout.simple_expandable_list_item_1,listeServ);
         baseSuccursales.addChildEventListener(new ChildEventListener() {
@@ -57,7 +57,7 @@ public class ProfilSuccur extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 for(DataSnapshot ds : snapshot.getChildren()) {
                     String nomService = ds.getValue(String.class);
-                    DatabaseReference refNomService = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference().child("services").child(nomService).child("nom");
+                    DatabaseReference refNomService = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference().child("services").child(nomService).child("nom");
                     refNomService.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {

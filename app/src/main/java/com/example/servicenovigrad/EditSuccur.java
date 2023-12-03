@@ -57,7 +57,7 @@ public class EditSuccur extends AppCompatActivity {
         btnModifSuccur = (Button) findViewById(R.id.btnModifSuccur);
         heureOuv=0;
         heureFer=0;
-        DatabaseReference refBase=FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference();
+        DatabaseReference refBase=FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference();
         DatabaseReference refNom = refBase.child("succursales").child(nomSucc).child("nomSuccur");
         refNom.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

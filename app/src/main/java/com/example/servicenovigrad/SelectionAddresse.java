@@ -30,7 +30,7 @@ public class SelectionAddresse extends AppCompatActivity {
         nomClient = intent.getStringExtra("nomClient");
         entreAddresse = (EditText) findViewById(R.id.entreAddresse);
         btnRechercheAdd = (Button) findViewById(R.id.btnRechercheAdd);
-        baseSucc = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com").getReference().child("succursales");
+        baseSucc = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com/").getReference().child("succursales");
         btnRechercheAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
