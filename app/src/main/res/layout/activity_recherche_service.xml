@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/photobackground"
-    tools:context=".RemoveService">
+    tools:context=".RechercheService">
 
     <TextView
-        android:id="@+id/removeTexte"
+        android:id="@+id/rechercheTexte"
         android:layout_width="match_parent"
         android:layout_height="82dp"
-        android:text="SVP, choisissez un service retirer de la liste des services offerts par votre succursale :"
+        android:text=""
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -24,7 +23,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/listeRemoveService"
+        android:id="@+id/listeRecherche"
         android:layout_width="match_parent"
         android:layout_height="578dp"
         app:layout_constraintBottom_toBottomOf="parent"

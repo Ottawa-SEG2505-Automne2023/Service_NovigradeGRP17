@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/photobackground"
-    tools:context=".TraiteDemande">
+    tools:context=".Formulaire">
 
     <TextView
-        android:id="@+id/txtViewTraite"
+        android:id="@+id/txtViewDemande"
         android:layout_width="411dp"
-        android:layout_height="120dp"
+        android:layout_height="58dp"
         android:text=""
         android:textAlignment="center"
         android:textColor="#000000"
@@ -24,8 +24,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
 
-    <TextView
-        android:id="@+id/traiteDocuments"
+    <EditText
+        android:id="@+id/editTextDocuments"
         android:layout_width="221dp"
         android:layout_height="155dp"
         android:ems="10"
@@ -38,8 +38,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.567" />
 
-    <TextView
-        android:id="@+id/traiteFormulaire"
+    <EditText
+        android:id="@+id/editTextFormulaire"
         android:layout_width="221dp"
         android:layout_height="155dp"
         android:ems="10"
@@ -53,10 +53,9 @@
         app:layout_constraintVertical_bias="0.227" />
 
     <TextView
-        android:id="@+id/viewTraiteDocuments"
+        android:id="@+id/textViewDocuments"
         android:layout_width="148dp"
         android:layout_height="155dp"
-        android:text="Documents fournis :"
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,10 +66,9 @@
         app:layout_constraintVertical_bias="0.567" />
 
     <TextView
-        android:id="@+id/viewTraiteFormulaire"
+        android:id="@+id/textViewFormulaire"
         android:layout_width="148dp"
         android:layout_height="155dp"
-        android:text="Informations fournis dans le formulaire :"
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,29 +79,15 @@
         app:layout_constraintVertical_bias="0.228" />
 
     <Button
-        android:id="@+id/btnApprouve"
-        android:layout_width="180dp"
-        android:layout_height="60dp"
+        android:id="@+id/btnEnvoyerDemande"
+        android:layout_width="281dp"
+        android:layout_height="64dp"
         android:backgroundTint="@android:color/holo_green_dark"
-        android:text="Approuver la demande"
+        android:text="Soumettre la demande"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.764" />
-
-    <Button
-        android:id="@+id/btnRefus"
-        android:layout_width="180dp"
-        android:layout_height="60dp"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:text="Refuser la demande"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.764" />
+        app:layout_constraintVertical_bias="0.902" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
