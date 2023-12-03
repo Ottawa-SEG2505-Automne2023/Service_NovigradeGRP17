@@ -30,6 +30,7 @@ public class TestsUnitaires {
     public void testEmail4() {
         assertFalse(RegisterActivity.estEmail("test"));
     }
+    //Tests pour le livrabe 3
     @Test
     public void testHeures1() {
         assertFalse(EditSuccur.heuresCorrectes(10,10));
@@ -45,5 +46,30 @@ public class TestsUnitaires {
     @Test
     public void testChamps2() {
         assertTrue(EditSuccur.champsCorrects("Novigrad12","Ottawa","12 Rue Lincoln","6131149562"));
+    }
+    //Tests pour le livrable 4
+    @Test
+    public void testaddresse1() {
+        assertFalse(SelectionAddresse.addresseCorrecte(""));
+    }
+    @Test
+    public void testaddresse2() {
+        assertFalse(SelectionAddresse.addresseCorrecte("Rue abc"));
+    }
+    @Test
+    public void testaddresse3() {
+        assertFalse(SelectionAddresse.addresseCorrecte("14"));
+    }
+    @Test
+    public void testaddresse4() {
+        assertTrue(SelectionAddresse.addresseCorrecte("14 Rue abc"));
+    }
+    @Test
+    public void testformulaire1() {
+        assertFalse(Formulaire.champsRemplis("Jean Korin, 1995/02/11",""));
+    }
+    @Test
+    public void testformulaire2() {
+        assertTrue(Formulaire.champsRemplis("Jean Korin, 1995/02/11","Passeport TC142EZ9EZ5"));
     }
 }
