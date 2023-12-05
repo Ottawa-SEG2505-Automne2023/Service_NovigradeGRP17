@@ -41,7 +41,7 @@ public class SelectionAddresse extends AppCompatActivity {
                             for(DataSnapshot ds : snapshot.getChildren()) {
                                 if(ds.getKey().equals("nomSuccur")){
                                     String nom = ds.getValue(String.class).toString();
-                                    DatabaseReference refAddresse = FirebaseDatabase.getInstance("https://novigrad-projet1-g09-default-rtdb.firebaseio.com").getReference("succursales/"+nom+"/addresse");
+                                    DatabaseReference refAddresse = FirebaseDatabase.getInstance("https://servicenovigrad-9d027-default-rtdb.firebaseio.com").getReference("succursales/"+nom+"/addresse");
                                     refAddresse.addListenerForSingleValueEvent(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(DataSnapshot dataSnapshot) {
